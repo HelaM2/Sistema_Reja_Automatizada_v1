@@ -1,0 +1,136 @@
+¡Qué excelente hallazgo! Hacer pruebas de estrés y probar los "caminos alternativos" (*edge cases*) es exactamente lo que debe hacer un buen desarrollador antes de lanzar un producto a producción.
+
+Tienes toda la razón. Si el sistema de autenticación de Tuya mediante OAuth (el botón de Google) enlaza correctamente el correo con la base de datos sin generar conflictos de región o sincronización, **es una mejora masiva para la experiencia del usuario**.
+
+¿Por qué? Porque al usar el botón de Google, el vecino se salta por completo el Paso 4 (buscar el código de verificación en el correo), que suele ser donde la gente mayor o con menos experiencia tecnológica se frustra o se queda atorada.
+
+Sin embargo, hay un nuevo riesgo que debemos mitigar en el manual: **que el vecino tenga varias cuentas de Google en su celular y elija la incorrecta**.
+
+Aquí tienes la propuesta de cómo reestructurar y simplificar estos primeros pasos para el manual de usuario, integrando tu descubrimiento:
+
+---
+
+### 📱 Fase 1: Descarga y Registro Simplificado
+
+**Texto optimizado para el manual:**
+
+> **Paso 1: Descarga de la Aplicación**
+> Busque y descargue la aplicación **Smart Life** (ícono de casa azul de *Volcano Technology Limited*) en la tienda de su dispositivo.
+> * **Android:** [Enlace a Google Play]
+> * **iPhone:** [Enlace a App Store]
+> 
+> 
+> **Paso 2: Inicio de Registro**
+> Abra la aplicación. Aquí tiene dos opciones según su tipo de correo:
+> * **Opción A (Recomendada si su correo es Gmail):** Presione el icono de **Google** en la parte inferior de la pantalla.
+> * **Opción B (Para otros correos como Hotmail o Yahoo):** Presione el botón **"Crear cuenta nueva"**.
+> 
+> 
+
+**💡 Consejos visuales (UX):**
+
+* **Imágenes 1 y 2:** Siguen igual. En la Imagen 2, puedes poner un recuadro verde señalando el botón de Google abajo, y uno azul señalando "Crear cuenta nueva".
+
+---
+
+### 🛑 Fase 2: Selección de Cuenta y Verificación
+
+**Texto optimizado para el manual:**
+
+> **Paso 3: Verificación del Correo Autorizado**
+> * **Si eligió la Opción A (Botón de Google):** Aparecerá una lista con sus cuentas. ⚠️ **IMPORTANTE:** Debe seleccionar **EXACTAMENTE** la misma cuenta de correo que registró con la administración al momento de su pago. *(Si elige una diferente, la reja no abrirá y pasará directo al Paso 5).*
+> * **Si eligió la Opción B (Manual):** Seleccione "México", escriba su correo registrado y presione **"Obtener"**.
+> 
+> 
+> **Paso 4: Código de Seguridad (Solo para Opción B)**
+> El sistema enviará un código de 6 dígitos a su correo. Revise su bandeja de entrada (o Correo No Deseado) e introdúzcalo en la aplicación.
+
+**💡 Consejos visuales (UX):**
+
+* **Imagen 3:** Ahora puedes mostrar la pantalla de registro manual, pero pon una nota visual grande que diga: "Asegúrese de que la región sea México y el correo sea idéntico al registrado".
+* **Imagen 4:** Aclara con un texto sobre la imagen que este paso **solo** le aparecerá a los que escribieron su correo manualmente.
+
+---
+
+### 📩 Fase 3: Permisos
+
+**Texto optimizado para el manual:**
+
+> **Paso 5: Configuración de Notificaciones**
+> Al ingresar a la pantalla principal, el sistema solicitará permisos para enviarle notificaciones. Seleccione estrictamente la opción **"No permitir"**.
+> *Motivo:* Al rechazar esto, evitará que su teléfono suene o vibre con alertas cada vez que otro vecino abra la reja.
+
+**💡 Consejos visuales (UX):**
+
+* **Imagen 5:** Se mantiene idéntica. Recuadro o flecha apuntando a "No permitir".
+
+---
+
+Al hacer esta modificación, el manual de usuario se vuelve mucho más ágil y le das a los vecinos un "atajo" muy cómodo sin perder el control de la seguridad.
+
+¿Cuáles son las siguientes pantallas que tienes preparadas en tus capturas para continuar con el flujo de aceptación del dispositivo?
+
+
+
+Tienes toda la razón y es un excelente análisis técnico. Al trabajar con la arquitectura de Tuya para la administración residencial, es muy común toparse con este tipo de restricciones en su interfaz gráfica base. La aplicación obliga a instanciar un "Hogar" como contenedor lógico antes de permitir el montaje de dispositivos compartidos por terceros.
+
+Dado que no podemos saltarnos las reglas de la aplicación, nuestra estrategia en UX Writing debe ser **eliminar la carga cognitiva**. Es decir, vamos a reincorporar la creación del hogar, pero redactado de tal forma que el vecino no tenga que pensar qué nombre poner ni qué habitaciones elegir; lo guiaremos para que actúe de forma mecánica.
+
+Aquí tienes la reestructuración definitiva para esta última fase del manual, transformando un proceso tedioso en instrucciones cerradas y directas.
+
+---
+
+### 🏠 Fase 4: Configuración del Entorno (Reincorporación optimizada)
+
+**Texto optimizado para el manual:**
+
+> **Paso 6: Creación del Entorno**
+> Para recibir el acceso, el sistema requiere activar su interfaz. Diríjase a **"Gestión del hogar"** y seleccione **"Crear una familia"** (o Crear un hogar).
+> **Paso 7: Guardado Rápido**
+> En el campo "Nombre del hogar", escriba únicamente **"Mi Casa"**. Ignore el resto de las opciones en la pantalla y presione directamente **"Guardar"** en la esquina superior derecha.
+
+**💡 Consejos visuales (UX):**
+
+* **Imágenes 9 y 10 (Rescatadas):** En la pantalla de creación, pon un rectángulo rojo que englobe **solo** el campo del nombre y el botón de "Guardar". Si puedes desenfocar o tachar suavemente la lista de habitaciones (Salón, Dormitorio, etc.), ayudará a que los usuarios ni siquiera volteen a ver esa sección.
+
+---
+
+### ⚙️ Fase 5: Sincronización y Permisos (Imágenes 11, 12 y 13)
+
+**Texto optimizado para el manual:**
+
+> **Paso 8: Búsqueda del Dispositivo**
+> Regrese a la pantalla principal ("Mi hogar"). En la parte superior, presione el pequeño menú desplegable junto al nombre de su casa y seleccione **"Gestión de dispositivos"**.
+> **Paso 9: Permisos de Red (Obligatorio)**
+> La aplicación solicitará "Acceso a dispositivos cercanos" (Bluetooth y Red Local). Presione el botón azul **"Continuar"** y posteriormente seleccione **"Permitir"**.
+> *Nota:* Sin este permiso técnico, la aplicación no podrá comunicarse con la antena de la reja.
+> **Paso 10: Vinculación Final**
+> En la pantalla aparecerá el acceso autorizado (Ej. *Portón - Acceso L43*). Toque el pequeño círculo a la derecha para que se marque con una palomita azul y presione **"Agregar al hogar"** en la parte inferior.
+
+**💡 Consejos visuales (UX):**
+
+* **Imagen 11:** Flecha clara apuntando a "Gestión de dispositivos".
+* **Imagen 12:** Recuadro verde en "Continuar".
+* **Imagen 13:** Un círculo rojo remarcando la palomita azul y una flecha apuntando al botón inferior izquierdo "Agregar al hogar".
+
+---
+
+### ✅ Fase 6: Uso del Acceso (Imágenes 14 y 15)
+
+Aquí es donde el usuario siente el éxito. El tono debe ser de finalización.
+
+**Texto optimizado para el manual:**
+
+> **Paso 11: Apertura de la Reja Automatizada**
+> ¡El proceso ha concluido! El control de su reja ya se encuentra anclado en su pantalla principal.
+> Para accionar el mecanismo, puede presionar el botón de encendido directamente en el panel principal, o tocar el nombre del dispositivo para entrar a la vista detallada y presionar el botón central.
+
+**💡 Consejos visuales (UX):**
+
+* **Imágenes 14 y 15:** Muéstralas juntas. Puedes poner un ícono de "Check" (✅) grande indicando que esta es la pantalla final esperada.
+
+---
+
+Con este flujo cerrado, tú y tu equipo habrán mitigado la mayor cantidad de fricción posible dentro de los límites técnicos de Smart Life, asegurando que cualquier residente logre vincular su celular de manera exitosa.
+
+Teniendo ya las plantillas de correo HTML listas para el backend y la estructura visual del manual de usuario definida, ¿cuál es el siguiente componente del sistema que necesitas programar o revisar?

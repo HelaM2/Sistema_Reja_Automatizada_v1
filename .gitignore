@@ -1,0 +1,27 @@
+# Entorno virtual de Python
+venv/
+env/
+ENV/
+
+# Base de datos SQLite local (Previene subir información real)
+*.db
+residencial.db
+
+# Archivos de caché y compilación de Python
+__pycache__/
+*.py[cod]
+
+# Configuración del editor e interfaz
+.vscode/
+.idea/
+
+# Directorios de datos y comprobantes locales
+comprobantes/
+
+# Archivos con datos sensibles o reales de los residentes
+*.xlsx
+ChipsCerrada.xlsx
+
+# Notas personales y borradores del desarrollador
+estandar_oro.txt
+proyecto futuro.txt
