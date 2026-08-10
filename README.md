@@ -20,7 +20,7 @@ Aplicación de escritorio robusta diseñada para la gestión integral de una pri
 El proyecto está diseñado bajo los principios de Inversión de Control (IoC) y Separación de Responsabilidades (SoC).
 
 ```text
-SISTEMA_REJA_AUTOMATIZADA_V2/
+SISTEMA_REJA_AUTOMATIZADA_v1/
 │
 ├── core/                       # Infraestructura base de bajo nivel
 │   ├── database.py             # Configuración, motor y conexión con SQLite
@@ -85,5 +85,5 @@ El desarrollo de este sistema es iterativo. Las siguientes características est�
 *Ingeniería Mecatrónica | UPIITA - IPN*
 
 *   **Email:** <menesesh01@gmail.com> | <hmenesesm1600@alumno.ipn.mx>
-*   **LinkedIn:** [Tu enlace a LinkedIn aquí]
-*   **GitHub:** [Tu enlace a GitHub aquí]
+*   **LinkedIn:** (próximamente)
+*   **GitHub:** <https://github.com/HelaM2/>
